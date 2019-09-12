@@ -32,7 +32,7 @@ namespace HomeWork
             test2 = sw2.ElapsedMilliseconds;
             Console.WriteLine($"後來，執行花費時間: {test2} ms");
 
-            decimal rtp = Math.Round((test2 / test1) * 100, 2);
+            decimal rtp = Math.Round(((test1- test2) / test1) * 100, 2);
 
             Console.WriteLine($"時間減少百分比: {rtp}");
 
