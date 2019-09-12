@@ -17,15 +17,17 @@ namespace HomeWork
 
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            imageProcess.ResizeImages(sourcePath, destinationPath, 2.0);
+            imageProcess.Pr_ResizeImages(sourcePath, destinationPath, 2.0);
             sw.Stop();
+            Console.WriteLine($"原本，執行花費時間: {sw.ElapsedMilliseconds} ms");
 
-            Console.WriteLine($"原本，執行花費時間: 2647 ms");
-            Console.WriteLine($"後來，執行花費時間: {sw.ElapsedMilliseconds} ms");
+            Stopwatch sw2 = new Stopwatch();
+            sw2.Start();
+            imageProcess.ResizeImages(sourcePath, destinationPath, 2.0);
+            sw2.Stop();
+            Console.WriteLine($"後來，執行花費時間: {sw2.ElapsedMilliseconds} ms");
+
             Console.ReadKey();
-
-            //原本，執行花費時間: 2647 ms
-            //後來，執行花費時間: 2071 ms
         }
     }
 }

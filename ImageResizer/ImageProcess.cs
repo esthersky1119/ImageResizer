@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace HomeWork
 {
 
-    public class ImageProcess
+    public partial class ImageProcess
     {
         /// <summary>
         /// 清空目的目錄下的所有檔案與目錄
